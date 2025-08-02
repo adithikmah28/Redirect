@@ -1,0 +1,12 @@
+# Aktifkan Modul Rewrite
+RewriteEngine On
+
+# Jangan terapkan aturan jika file atau direktori benar-benar ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Aturan utama untuk URL film
+# ^movie/(\d+)$ : Cocokkan URL yang dimulai dengan "movie/", diikuti oleh satu atau lebih angka (\d+)
+# /detail.html?id=$1 : Arahkan secara internal ke detail.html dengan parameter id yang diambil dari URL ($1)
+# [L] : Berhenti memproses aturan lain jika aturan ini cocok
+RewriteRule ^movie/(\d+)$ /detail.html?id=$1 [L]
