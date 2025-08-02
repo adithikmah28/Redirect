@@ -1,7 +1,7 @@
 // script.js
 
 // PENTING: Ganti dengan API Key TMDB lo!
-const API_KEY = 'GANTI_DENGAN_API_KEY_TMDB_LO'; 
+const API_KEY = 'bda883e3019106157c9a9c5cfe3921bb'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
