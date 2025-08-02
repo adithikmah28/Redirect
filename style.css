@@ -1,0 +1,124 @@
+/* style.css */
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-dark-color: #1c1c1c;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: var(--light-dark-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+h1, h2 {
+    color: var(--text-color);
+}
+
+main {
+    padding: 2rem;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background-color: var(--light-dark-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+}
+
+.movie-card-info {
+    padding: 1rem;
+}
+
+.movie-card-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.movie-card-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* --- Style untuk Halaman Detail --- */
+#movie-detail-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.detail-poster img {
+    width: 300px;
+    border-radius: 8px;
+}
+
+.detail-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.detail-info h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.genres span {
+    background-color: var(--primary-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.back-button {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.loading {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #movie-detail-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .detail-poster img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
